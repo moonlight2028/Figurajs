@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras - DOM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="cont-botones">
+        <h2>INTERACCIONES</h2>
+        <button onclick="circulo()">circulo</button>
+        <button onclick="rectangulo()">rectangulo</button>
+        <button onclick="triangulo()">triangulo</button>
+        <button onclick="girar()">girar</button>
+        <button onclick="arriba()">arriba</button>
+        <button onclick="abajo()">abajo</button>
+        <button onclick="izquierda()">izquierda</button>
+        <button onclick="derecha()">derecha</button>
+        <button onclick="oculto()">ocultar</button>
+        <button onclick="gif()">gif</button>
+        <button onclick="degradado()">degradado</button>
+        <button onclick="spinner()">spinner</button>
+        <button onclick="loader()">loader</button>
+        <button onclick="panel()">panel lateral</button>
+        <button onclick="panelsup()">panel superior</button>
+      </div>
+      <div class="cont-figura">
+        <h2>FIGURA</h2>
+        <div id="figura" class="figures"></div>
+      </div>
+    </section>
+
+    <div class="panelizq">
+      <a href="#" class="close" onclick="panel()">x</a>
+      <h3>menu principal</h3>
+      <ul>
+        <a href="#">inicio</a>
+        <a href="#">nostros</a>
+        <a href="#">productos</a>
+        <a href="#">contactos</a>
+      </ul>
+    </div>
+
+    <div class="panelsup">
+      <a href="#" class="close2" onclick="panelsup()">x</a>
+      <img src="../Figuras-js/img/landscape-1497533116-not-dead.gif" alt="" />
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

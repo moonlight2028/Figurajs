@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/simone-secci-osyIadsaAfY-unsplash.jpg");
+  background-size: cover;
+}
+section {
+  width: 90%;
+  border: 2px solid purple;
+  margin: 100px;
+  display: flex;
+}
+section .cont-botones {
+  width: 50%;
+  min-height: 500px;
+  text-align: center;
+  padding: 40px 20px;
+  border: 2px solid purple;
+  backdrop-filter: blur(5px);
+}
+section .cont-figura {
+  width: 50%;
+  min-height: 500px;
+  text-align: center;
+  padding: 40px 20px;
+  border: 2px solid purple;
+  backdrop-filter: blur(5px);
+}
+
+h2 {
+  font-size: 26px;
+  color: #fff;
+  /* font-family;*/
+  margin-bottom: 50px;
+}
+.cont-botones button {
+  padding: 12px 30px;
+  font-size: 20px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid purple;
+  margin: 20px;
+}
+
+.cont-botones button:hover {
+  background-color: blueviolet;
+  color: skyblue;
+}
+
+#figura {
+  width: 220px;
+  height: 220px;
+  background: skyblue;
+  border: 2px solid purple;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+#figura.circulo {
+  border-radius: 50%;
+  transition: 1s;
+}
+#figura.rectangulo {
+  height: 400px;
+  transition: 1s;
+  /* transform: rotate() */
+  /* transform: translate-y() */
+  /* transform: translate-x()*/
+  /* transform: translate-x(-)*/
+  /* linear-gradent=*/
+}
+
+#figura.triangulo {
+  transition: 1s;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #491cb3;
+  background: transparent;
+}
+
+#figura.girar {
+  transition: 1s;
+  transform: rotate(180deg);
+}
+
+#figura.arriba {
+  transition: 1s;
+  transform: translateY(-200px);
+}
+
+#figura.abajo {
+  transition: 1s;
+  transform: translateY(200px);
+}
+#figura.derecha {
+  transition: 1s;
+  transform: translateX(500px);
+}
+#figura.izquierda {
+  transition: 1s;
+  transform: translateX(-500px);
+}
+#figura.oculto {
+  transition: 1s;
+  opacity: 0;
+}
+#figura.gif {
+  width: 498px;
+  height: 465px;
+  background: url("../img/gato-bailarín.gif");
+  background-size: contain;
+}
+
+#figura.degradado {
+  width: 400px;
+  height: 400px;
+  background-color: #ff1493;
+  background-image: linear-gradient(
+    319deg,
+    #ff1493 0%,
+    #0000ff 37%,
+    #ff8c00 100%
+  );
+}
+
+#figura.spinner {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.spinner:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #ff00cc 0%, #333399 100%);
+  animation: spin 0.9s infinite linear;
+  top: 0;
+  left: 0;
+}
+
+.spinner:after {
+  width: 85%;
+  height: 85%;
+  background-color: #151515;
+  top: 49.5%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#figura.loader {
+  position: relative;
+  width: 164px;
+  height: 164px;
+  background: transparent;
+  border: none;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  animation: rotate 1s ease-in infinite;
+}
+.loader::after {
+  width: 20px;
+  height: 20px;
+  background-color: #ff3d00;
+  animation: rotate 1s ease-in infinite, moveY 1s ease-in infinite;
+}
+
+@keyframes moveY {
+  0%,
+  100% {
+    top: 10%;
+  }
+  45%,
+  55% {
+    top: 59%;
+  }
+  60% {
+    top: 40%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg) scale(1, 1);
+  }
+  25% {
+    transform: translate(-50%, 0%) rotate(180deg) scale(1, 1);
+  }
+  45%,
+  55% {
+    transform: translate(-50%, 100%) rotate(180deg) scale(3, 0.5);
+  }
+  60% {
+    transform: translate(-50%, 100%) rotate(180deg) scale(1, 1);
+  }
+  75% {
+    transform: translate(-50%, 0%) rotate(270deg) scale(1, 1);
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg) scale(1, 1);
+  }
+}
+
+.panelizq {
+  width: 350px;
+  height: 100vh;
+  position: absolute;
+  left: -450px;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  padding: 50px 40px;
+  transition: 0.5s;
+}
+
+.panelizq h3 {
+  font-size: 30px;
+  color: #012937;
+}
+
+.panelizq ul a {
+  display: block;
+  padding: 10px 15px;
+  margin: 8px 0;
+  max-width: 250px;
+  background: #012937;
+  color: #fff;
+}
+.panelizq.activo {
+  left: 0;
+}
+.close {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  color: gray;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.panelsup {
+  width: 0%;
+  height: 0vh;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  text-align: center;
+  z-index: 999;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.panelsup img {
+  top: 10px;
+  padding: 20px 30px;
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+}
+
+.panelsup.activo2 {
+  width: 100%;
+  height: 100vh;
+}
+.close2 {
+  position: absolute;
+  right: 60px;
+  top: 10px;
+  color: #491cb3;
+  text-decoration: none;
+  font-size: 25px;
+}
